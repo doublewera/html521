@@ -39,3 +39,6 @@ ssh-ed25519 AAAAC3NzaCБУБУБУБУБУБУБУБУБУБУБu1UBRT3V7U2Zl9/M
 
 git clone git@github.com:ВАШ_ЮЗЕРНЕЙМ_НА_ГИТХАБЕ/html521.git
 
+13. git config user.name --local "ВАШЕ ИМЯ"
+14. git config user.email --local "ВАШ ЕМАЙЛ"
+
