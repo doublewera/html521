@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>суши-бар</title>
+    <link href="les3.css"
+    rel="stylesheet" type="text/css">
+</head>
+<body>
+    <table class="sushibar">
+        <tr>
+            <th colspan="2">тип суши/описание</th>
+        </tr>
+<tr>
+    <td><h4>Нигири — классика японской кухни</h4>Нигири — это, пожалуй, самый традиционный вид суши.
+        Он представляет собой небольшой комочек риса, слегка прижатый руками,
+        на который сверху выкладывается ломтик свежей рыбы, креветки или другой морепродукт.
+        Иногда нигири дополняется полоской нори, чтобы лучше удерживать начинку.
+    </td>
+    <td><h4>Урамаки — роллы «наоборот»</h4>Урамаки — это роллы, у которых рис находится снаружи,
+         а начинка завернута в нори внутри. Самый известный пример — «Калифорния» и «Филадельфия».
+        Часто такие роллы украшают икрой тобико или кунжутом.
+    </td>
+</tr>
+<tr>
+    <td><img src="images/nigiri.jpg"></td><td><img src="images/uramaki.jpg"></td>
+</tr>
+        <tr>
+            <td rowspan="2"><h3>сделать заказ</h3></td><td><label for='nigiri'>Нигири</label><input type='radio' name='sushi' id='nigiri'></td>
+        </tr>
+        <tr>
+            <td><label for='uramaki'>Урамаки</label><input type='radio' name='sushi' id='uramaki'></td>
+        </tr>
+        <tr>
+            <td><label for="excellent">отличное обслуживание</label>
+                <input type="checkbox" id="excellent">
+            </td>
+            <td><label for="satisfactory">удовлетворительное обслуживание</label>
+            <input type="checkbox" id="satisfactory">
+            </td>
+        </tr>
+        <tr>
+           <td>введите дату планируемого посещения</td><td><input type="date"></td>
+        </tr>
+        <tr>
+           <td><label for="visitors">введите число гостей</label><input type="number" id="visitors"></td>
+           <td><label for="meeting">время планируемого визита</label><input type="time" id="meeting"></td>
+        </tr> 
+    </table>
+    <h1>Список литературы для подготовки к экзамену:</h1>
+    <ol>
+        <li><a href="https://www.litres.ru/book/erik-frimen/izuchaem-html-xhtml-i-css-8511974/?lfrom_processed=1089817115">Робсон Э.,Фримен Э. Изучаем HTML;</a></li>
+        <li><a href="https://www.litres.ru/book/dzhon-dakett/html-i-css-razrabotka-i-dizayn-veb-saytov-38272898/?lfrom_processed=1089817115">HTML и CSS. Разработка и дизайн веб-сайтов;</a></li>
+    </ol> 
+</body>
+</html>

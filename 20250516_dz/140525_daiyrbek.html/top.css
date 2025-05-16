@@ -1,0 +1,16 @@
+table {
+    background-color: rgb(44, 28, 218);
+    border-color:solid rgb(72, 58, 167);
+    border: 10px;
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+    border-top-style: inset;
+    width: 700px;
+    height: 400px;
+}
+td {
+    border: 2px solid black;
+}
+.ru{
+    background-color: azure;
+}

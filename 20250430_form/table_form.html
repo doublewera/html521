@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Формы</title>
+    <link rel="stylesheet" href="appearance.css">
+    <title>
+        <h1>Формы</h1>
+    </title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Как вас зовут? </td>
+            <td><input placeholder="ФИО"></td>
+        </tr>
+        <tr>
+            <td>Номер кредитной карты: </td>
+            <td><input type="number" placeholder="XXXX XXXX XXXX XXXX"></td>
+        </tr>
+        <tr>
+            <td><label for="not_robot">Подтвердите, что вы не робот:</label></td>
+            <td><input type="checkbox" id="not_robot"></td>
+        </tr>
+        <tr>
+            <td>Укажите пол:</td>
+            <td><label for="female">Ж</label>
+                <input id="female" type="radio" name="radiobutton">
+                <label for="male">М</label>
+                <input type="radio" id="male" name="radiobutton"></td>
+            
+        </tr>
+        <tr>
+            <td><input type="button"></td>
+            <td>Кнопка простая</td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Нажми"></td>
+            <td>Кнопка с подисью</td>
+        </tr>
+        <tr>
+            <td><input type="range"></td>
+            <td>диапазон, от 0 до 100</td>
+        </tr>
+        <tr>
+            <td><input type="date"></td>
+            <td>Календарь</td>
+        </tr>
+        <tr>
+            <td><input type="datetime-local"></td>
+            <td>Сложный календарь</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+table {
+    border-color:solid black;
+    border: 15px;
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+    border-style:groove;
+    width: 700px;
+    height: 400px;
+}
+img {
+	width: 50px;
+	height: 50px;
+}
+td {
+    border: 2px solid black;
+}
+.giv{
+    border-color: blue;
+    background-color:green
+   
+
+} 
