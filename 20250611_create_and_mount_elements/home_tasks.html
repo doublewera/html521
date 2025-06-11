@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа со страницей</title>
+</head>
+<body>
+    <h1>Содержание</h1>
+    <ol>
+        <li><a href="#elemwork">Работа с элементами</a></li>
+        <li><a href="#dtwork">Работа с датой и временем</a></li>
+        <li><a href="#inputwork">Работа с полями ввода</a></li>
+    </ol>
+    <h1><a name="elemwork">Работа с элементами</a></h1>
+    <ol>
+    <li>Для создания элемента вызываем let ВАШЭЛЕМЕНТ = document.createElement('ЧТО СОЗДАЕМ')</li>
+    <li>Для прикрепления элемента вызываем КУДАПРИКРЕПЛЯЕМ.appendChild(ВАШЭЛЕМЕНТ)</li>
+    <li>Для изменения текста внутри элемента вызываем ВАШЭЛЕМЕНТ.textContent = 'Нужный текст'</li>
+    </ol>
+    <pre>
+        let p = document.createElement('p')
+        document.body.appendChild(p)
+        p.textContent = 'Текст вашего абзаца'
+        // Второй раз для переменной мы не пишем let!
+        // Переменную можно переиспользовать
+        p = document.createElement('p')
+        document.body.appendChild(p)
+        p.textContent = 'Текст другого абзаца'
+    </pre>
+    <h2>Можно прикреплять один готовый элемент внутрь другого</h2>    
+    <pre>
+        let ol = document.createElement('ol')
+        document.body.appendChild(ol)
+
+        let li = document.createElement('li')
+        ol.appendChild(li)
+        li.textContent = 'Текст элемента списка'
+        
+        li = document.createElement('li')
+        ol.appendChild(li)
+        li.textContent = 'Текст второго элемента списка'
+    </pre>
+    <h1><a name="dtwork">Работа с датой и временем</a></h1>
+    <h1><a name="inputwork">Работа с полями ввода</a></h1>
+</body>
+</html>
