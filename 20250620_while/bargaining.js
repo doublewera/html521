@@ -7,9 +7,11 @@
  * За какую сумму будет куплен букет?
  */
 
-let seller       = 10000;  // Начальная цена от продавца
+function next_price() {
+// Улучшения: брать со страницы начальные цены покупателя и продавца
+let seller       = seller_start.valueAsNumber;  // Начальная цена от продавца
 let seller_minus = 500;
-let buyer        = 4000;
+let buyer        = buyer_start.valueAsNumber;
 let buyer_plus   = 600;
 
 while (buyer < seller) {
@@ -17,8 +19,11 @@ while (buyer < seller) {
     console.log('продавец: -', seller, '!\nпокупатель: -', buyer, '?')
     // Логика покупателя:
     let buyer_next = buyer + buyer_plus; // Вычислил, но вслух не сказал!
-    buyer = buyer_next;             // buyer = buyer + buyer_plus
+    buyer_start.valueAsNumber = buyer_next;             // buyer = buyer + buyer_plus
     let seller_next = seller - seller_minus; // продавец тоже поменял цену
-    seller = seller_next;
+    seller_start.valueAsNumber = seller_next;
+    seller       = seller_start.valueAsNumber;
+    buyer        = buyer_start.valueAsNumber;
 }
-console.log('Букет куплен за ', seller)
+console.log('Букет куплен за ', seller_start.valueAsNumber )
+}
