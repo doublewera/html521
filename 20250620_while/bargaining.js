@@ -24,6 +24,13 @@ while (buyer < seller) {
     seller_start.valueAsNumber = seller_next;
     seller       = seller_start.valueAsNumber;
     buyer        = buyer_start.valueAsNumber;
+
+    let p = document.createElement('p')
+    p.textContent = 'продавец: -' + seller;
+    document.body.appendChild(p)
+    p = document.createElement('p')
+    p.textContent = 'покупатель: -' + buyer + '?';
+    document.body.appendChild(p)
 }
 console.log('Букет куплен за ', seller_start.valueAsNumber )
 }
