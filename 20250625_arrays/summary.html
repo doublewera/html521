@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="prism.js" defer></script>
+    <link rel="stylesheet" href="prism.css">
+    <title>Массивы. Составные типы данных</title>
+</head>
+<body>
+    <h1>Строки</h1>
+<h2>Строки состоят из символов!</h2>
+<p>Чтобы обратиться к конкретному символу,
+     надо поставить после строки квадратные
+     скобки и внутри них - номер символа в строке</p>
+    <pre>
+    <code class="language-JavaScript">
+    const imya = 'Вася'
+    console.log(imya[1]) 
+    </code>
+    </pre>
+<p>Символы в строке нумеруются с нуля! Строка знает свою длину.</p>
+<p><b>Пример 1:</b> вывести все буквы имени.</p>
+    <pre>
+    <code class="language-JavaScript">
+    const imya = 'Вася'
+    let bukva_nomer = 0  // Чтобы начать с начала, нужно присвоить букве номер ноль
+    while (bukva_nomer < imya.length) {  // пока номер буквы меньше длины строки
+        console.log(imya[bukva_nomer])   // печатаем номер буквы
+        bukva_nomer++                    // не забываем увеличивать номер буквы
+    }
+    </code>
+    </pre>
+
+<p>У каждого символа есть свой номер в <a href="https://habr.com/ru/articles/478636/">таблице кодировки</a>. Кодировки бывают разные, но
+    латинские буквы часто имеют те же номера в разных кодировках.
+</p>
+    <pre>
+    <code class="language-JavaScript">
+    const myletter = 'B';
+    console.log(myletter.charCodeAt(0))
+    console.log(String.fromCharCode(97))
+    </code>
+    </pre>
+
+    <h1>Домашнее задание</h1>
+    <ol>
+        <li> задание: дана переменная let academy = 'TOP'; Какой номер имеет буква P? (Можно не кодить, ответить, подумав. Можно закодить)</li>
+        <li> задание: дана строка. Вывести в консоль её длину.</li>
+        <li> задание: дана строка let mystr = 'nice'. Вывести в консоль (циклом): <br />0 - n<br />1 - i<br /> 2 - c<br />3 - e</li>
+        <li> задание: дана строка let mystr = 'nice'. Вывести в консоль (циклом): 1 - n, 2 - i, 3 - c, 4 - e</li>
+        <li> задание: Создайте переменную, хранящую какую-нибудь фразу, например, "Мама мыла раму". Определите номера символов, содержащие пробелы.</li>
+    </ol>
+</body>
+</html>
