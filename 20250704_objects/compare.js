@@ -7,16 +7,17 @@ let crr = [2, 4, 66]
 let areEqual = arr.length == brr.length
 // Установим предполагаемое равенство массивов как равенство их длин
 
+let i = 0  // начнем сравнение с первого элемента
 if (areEqual) {
-    let i = 0  // начнем сравнение с первого элемента
     while((i < arr.length) && (arr[i] == brr[i])) {
         // Пока не достигли конца массивов и пока элементы равны
         i++
     }
     areEqual = i == arr.length   // достигли ли мы конца массива?
-    
 }
-
+let wrong = [arr[i], brr[i]]
+console.log(wrong)
+console.log(arr[i], brr[i])
 console.log(areEqual);
 
 // Проверить, равны ли массивы arr, crr
