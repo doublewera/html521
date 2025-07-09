@@ -38,10 +38,76 @@ let mys = sum3(5, 7, 10)
 console.log('Если сложить 5, 7 и 10 будет ', mys)
 
 
+function min3(a, b, c) {
+    if (a > b) {
+        if (b > c) {
+            return c
+        } else {
+            return b
+        }
+    } else {  // а меньше
+        if (c > a) {
+            return a
+        } else {
+            return c
+        }
+    }
+}
+console.log('Из 4,2,9 наименьшее это: ', min3(4, 2, 9))
+    
+
+function look_at_my_args(a, b) {
+    console.log('a = ', a)
+    console.log('b = ', b)
+    console.log('Все переданное: ', arguments)
+}
+look_at_my_args(1)
+look_at_my_args(1, 2)
+look_at_my_args(1, 2, 3)
 
 
+function itermin() {
+    console.log(arguments.length)
+    if (arguments.length) {
+        let result = arguments[0]
+        for (let elem of arguments) {
+            if (elem < result) {
+                result = elem
+            }
+        }
+        return result
+    }        
+}
+
+// Рекурсивная функция
+function mymin() {
+    if (arguments.length) {
+        let result = arguments[0]
+        // Рекурсивный вызов
+        let other = mymin(...Array.from(arguments).slice(1))
+        if (other != undefined) {
+            if (other < result) {
+                return other
+            }
+        }
+        return result
+    } 
+    // return undefined default      
+}
+console.log('iteration', itermin(2, 7, 4, 1, 9, 3, 5))
+console.log('recursion', mymin(2, 7, 4, 1, 9, 3, 5))
 
 
+function show_hide(id) {
+    let myelem = document.getElementById(id)
+    if (myelem.style.display == 'none')  {
+        myelem.style.display='block'
+    } else {
+        myelem.style.display='none'
+    }
+}
 
 
-// Почему в console.log можно передать сколько хочешь агументов?
+function del(id) {
+    document.getElementById(id).remove()
+}
