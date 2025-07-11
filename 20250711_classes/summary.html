@@ -36,26 +36,66 @@
     <li>Название - <s>традиционно</s> всегда с большой буквы</li>
     <li>В фигурных скобках - свойства класса - <b>поля</b> и <b>методы</b></li>
     <li>Поле - переменная в классе.</li>
-    <li>Метод - функция в классе.</li>
-    <li>Конструктор - метод для создания и инициализации класса. <b>Единственный вызывается по имени класса.</b></li>
+    <li>Метод - функция в классе <b>без ключевого слова function</b>.</li>
+    <li>Конструктор (называется constructor) - метод для создания и инициализации класса. <b>Единственный вызывается по имени класса.</b></li>
 </ol>
 <pre>
     <code class="language-JavaScript">
-        
-        let man = {
-            'firstname': 'Вася',
-            'age': 35
-        }
-        let girl = {
-            'firstname': 'Ася',
-            'age': 32
-        }
-        let boy = {
-            'firstname': 'Дима',
-            'age': 5
-        }
+class Human {
+    firstname                   // поле
+    birthday                    // поле
+    constructor(newname, dt) {  // метод
+        this.firstname = newname  // 'Вася'
+        this.birthday = dt        // new Date(2000, 5, 2)
+    }
+}
+
+let man = new Human('Вася', new Date(1990, 2, 4))
+let girl = new Human('Ася', new Date(1993, 6, 4))
+let boy = new Human('Дима', new Date(2019, 10, 18))
     </code>
     </pre>   
+<p>Теперь можно создавать объект класса, а присваиванием занимается его метод-конструктор. Но имя и дату рождения можно "испоритить" извне:</p>
+<pre>
+    <code class="language-JavaScript">
+class Human {
+    firstname                   // поле
+    birthday                    // поле
+    constructor(newname, dt) {  // метод
+        this.firstname = newname  // 'Вася'
+        this.birthday = dt        // new Date(2000, 5, 2)
+    }
+}
+
+let man = new Human('Вася', new Date(1990, 2, 4))
+let girl = new Human('Ася', new Date(1993, 6, 4))
+let boy = new Human('Дима', new Date(2019, 10, 18))
+girl.firstname = 'Миша'
+console.log(girl.firstname)
+    </code>
+    </pre> 
+<p>Решение: поле сделать приватным и создать метод-геттер:</p>
+<pre>
+    <code class="language-JavaScript">
+class Human {
+    #firstname                  // приватное поле
+    birthday                    // поле
+    constructor(newname, dt) {  // метод
+        this.firstname = newname  // 'Вася'
+        this.birthday = dt        // new Date(2000, 5, 2)
+    }
+    get name() {
+        return this.#firstname
+    }
+}
+
+let man = new Human('Вася', new Date(1990, 2, 4))
+let girl = new Human('Ася', new Date(1993, 6, 4))
+let boy = new Human('Дима', new Date(2019, 10, 18))
+// girl.#firstname = 'Миша' - ошибка, нельзя записывать и читать приватное поле
+console.log(girl.name)  // обращение к методу getter - без круглых скобок!
+    </code>
+    </pre> 
 <h2>Смысл в программировании</h2>
     <h1>Домашнее задание</h1>
     <ol start="3">
