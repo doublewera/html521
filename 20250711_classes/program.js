@@ -37,6 +37,43 @@ console.log(girl.birthday)
 girl.birthday.setMonth(0)
 console.log(girl.birthday)
 
-girl.birthday = new Date(2028,8,8)
+girl.birthday = new Date(2028, 8, 8)
 
 console.log(girl.birthday)
+
+/**
+ * Написать класс Машина с конструктором и двумя полями: марка и количество колес.
+ * Марка должна быть только на чтение, а сеттер количества колес не должен давать
+ * присвоить меньше 4 колес, больше 20 и нечетное число.
+ */
+class Car {
+    #brand
+    #wheels
+    constructor(brand, wheels) {
+        this.#brand = brand
+        this.wheels = wheels  // да, в конструкторе тоже удобно использовать свой сеттер!
+    }
+    get brand() {
+        return this.#brand
+    }
+    get wheels() {
+        return this.#wheels
+    }
+    /**
+     * @param {number} new_wheels
+     */
+    set wheels(new_wheels) {
+        if (new_wheels >= 4 && new_wheels <= 20) {
+            if (new_wheels % 2 === 0) {
+                this.#wheels = new_wheels
+            } else {
+                console.error("Количество колес должно быть четным, а не ", new_wheels)
+            }
+        } else {
+            console.error("Количество колес должно быть от 4 до 20, а не ", new_wheels)
+        }
+    }
+}
+
+let c = new Car('Lada', 4)
+console.log(c.brand, c.wheels)
