@@ -36,3 +36,16 @@ num = nachalo - nachalo % kratno + kratno
 while num <= konets:
     print(num)
     num = num + kratno
+
+kratno = 5
+print('Задание 4: количество чисел, кратных %i' % kratno)
+# 4. Количество чисел, кратных 5
+num = nachalo - nachalo % kratno + kratno
+kolvo = 0
+otladka = False # True
+while num <= konets:
+    if otladka:
+        print(num)
+    num = num + kratno
+    kolvo += 1
+print(kolvo)
