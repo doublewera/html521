@@ -42,3 +42,24 @@ except:
 # Создать кортеж из чисел от 1 до 8
 # Показать, что это кортеж
 # Удалить числа 4 и 7
+
+#позиции0  1  2  3  4  5  6  7
+nums = (1, 2, 3, 4, 5, 6, 7, 8)
+# НЕ ТРЕБОВАЛА!
+best_numbs = tuple(range(1, 9))
+
+try: 
+    print(nums[:3] + nums[4:6] + nums[-1])
+except:
+    traceback.print_exc()
+
+try: 
+    print(nums[:3] + nums[4:6] + (nums[-1]))
+except:
+    traceback.print_exc()
+print(nums[:3] + nums[4:6] + nums[-1:])
+print(nums[:3] + nums[4:6] + (nums[-1], ))
+print(nums[:3] + nums[4:6] + nums[7:])
+print(nums[:3] + nums[4:6] + (nums[7], ))
+print(nums[:3] + nums[4:6] + (nums[len(nums) - 1], ))
+print(nums[:3] + nums[4:6] + nums[len(nums) - 1:])
