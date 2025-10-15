@@ -26,12 +26,13 @@ def in_my_list(lst, num):
     # 3. Переменная-индекс превысила или стала равна длине списка 
     # 4. Мы не нашли наше число.
     # 5. ВЕРНУТЬ None
+    spisok_positii = []
     i = 0  # ИНДЕКС
     while i < len(lst):
-        while lst[i] == num:
-            return i
+        if lst[i] == num:
+            spisok_positii += [i]  # spisok_positii.append(i)
         i += 1
-    return None
+    return spisok_positii  # До 21:20
 
 # позиции  0  1  2  3  4  5  6  7
 numlist = [3, 2, 8, 4, 5, 3, 9, 6]
