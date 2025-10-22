@@ -18,6 +18,12 @@ class Room:
     def ploshad(self):
         return self.width * self.length
     
+    #            я    тот второй
+    def __add__(self, other):
+        if self.width == other.width:
+            return Room(self.width, self.length + other.length)
+        if self.width == other.length:
+    
     def __str__(self):
         return 'Комната %ix%i, высотой %iм\nПлощадь %i' % (
             self.width, self.length, self.height, self.ploshad()
