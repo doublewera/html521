@@ -17,21 +17,28 @@ class Room:
 
     def ploshad(self):
         return self.width * self.length
+               
+    def __str__(self):
+        return 'Комната %ix%i, высотой %iм\nПлощадь %i' % (
+            self.width, self.length, self.height, self.ploshad()
+        )
     
     #            я    тот второй
     def __add__(self, other):
         if self.width == other.width:
             return Room(self.width, self.length + other.length)
         if self.width == other.length:
-    
-    def __str__(self):
-        return 'Комната %ix%i, высотой %iм\nПлощадь %i' % (
-            self.width, self.length, self.height, self.ploshad()
-        )
-    
-my_room = Room(4, 4)
+            return Room(self.width, self.length + other.width)
+        if self.length == other.length:
+            return Room(self.width + other.width, self.length)
+        if self.length == other.width:
+            return Room(self.width + other.length, self.length)
+
+my_room = Room(4, 3)
 print('Площадь комнаты: ', my_room.ploshad())
 print('Так печатается комната: \n', my_room, sep='')
+your_room = Room(5, 4)
+print(my_room + your_room)
 
 # Написать класс квартира с массивом комнат,
 class Flat:
