@@ -14,7 +14,9 @@ class Student:
                 'Имя должно быть строкой, а не ' + str(type(new_name)))
         self.__name = new_name
 
-    name = property(get_name, set_name)
+    name = property(
+        get_name,
+        set_name)
 
     def get_marks(self):
         # return list(tuple(self.__marks))
